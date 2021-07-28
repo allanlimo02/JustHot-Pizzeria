@@ -40,6 +40,7 @@ Incase of any issue and you would like to be helped to sort out, don't hessitate
 * Facebook: Allan Ngetich Chichi
 * Instagram: allaney_ngetich
 ### License
+This Project comes with MIT licence, To view it, <a href="https://github.com/allanlimo02/JustHot-Pizzeria/blob/master/LICENSE">click here</a>
 
 
 **{Made with pride for <a href="https://moringaschool.com" target="_blank">Moringa School</a>}**
