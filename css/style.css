@@ -27,3 +27,19 @@ body{
     background-color: white;
     border-radius: 20px;
 }
+
+/* Delivery Section */
+#deldetails{
+    display: none;
+    padding: 10px;
+    border:solid 3px green;
+    border-radius: 10px;
+}
+/* Submit button */
+#submit-btn{
+    display: none;
+}
+#reset-order{
+    display: none;
+    margin-left: 50px;
+}

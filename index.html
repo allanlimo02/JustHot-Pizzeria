@@ -24,13 +24,13 @@
                 </p>
             </div>
             <div class="col-md-4">
-                <h3 style="text-align: center; color: white;">Order details</h3>
+                <h3 style="text-align: center; color: white;">Place Order </h3>
                 <!-- Order Form -->
                 <div class="card-body">
                     <form>
                         <!-- Username input -->
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
                               <input type="text" class="form-control" id="userName">
                             </div>
@@ -41,8 +41,9 @@
                             <div class="col-sm-10">
                               <select id="pizzaSize" class="form-select">
                                   <option value=""></option>
-                                  <option value="500">Small Pizza @ Ksh 500</option>
-                                  <option value="750">Medium Pizza</option>
+                                  <option value="600">Small Pizza @ Ksh 600</option>
+                                  <option value="850">Medium Pizza @ Ksh. 850</option>
+                                  <option value="1200">Mega Pizza @ Ksh. 1200</option>
                               </select>
                             </div>
                           </div>
@@ -72,8 +73,39 @@
                                 </div>
                             </div>
                           </div>
+                          <!-- Delivery option -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Delivery</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="fordelivery" value="option1">
+                                    <label class="form-check-label" for="exampleRadios1"> To Be Deliverd </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="forpickup" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">Pick By Self </label>
+                            </div>
+                          </div>
+                          </div>
+                          <!-- Delivery Details -->
+                          <div class="mb-3 row" id="deldetails" >
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Phone Number</label>
+                            <div class="col-sm-10">
+                              <input type="number" class="form-control" id="userName">
+                            </div>
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Location</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="userName">
+                            </div><br><br>
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Street</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="userName">
+                            </div>
+                        </div>
 
-
+                        <a href="#" id="checkdetails" class="btn btn-primary">Check Order Details</a><br><br>
+                        <button id="submit-btn" class="btn btn-success" type="submit">Confirm Order</button>
+                        <button type="reset" class="btn btn-danger" id="reset-order">Reset Order</button>
                     </form>
                   </div>
                
