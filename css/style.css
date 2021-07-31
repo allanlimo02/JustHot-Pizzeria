@@ -43,3 +43,25 @@ body{
     display: none;
     margin-left: 50px;
 }
+
+/* Order details display */
+.order-det-main h3{
+    color: white;
+    text-align: center;
+
+}
+.order-details{
+    background-color: white;
+    height: 440px;
+    border-radius: 20px;
+    margin-right:20px ;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+#confirm-order{
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 100px;
+    
+}
