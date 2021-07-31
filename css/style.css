@@ -1,0 +1,45 @@
+body{
+    background-image: url(../assets/landing.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.mainer{
+    background-color: rgba(0,80,0,0.82);;
+    border-radius: 10px;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.clm1{
+    text-align: center;
+    color: white;
+}
+.clm1 h1{
+    color: red;
+}
+.logo{
+    border-radius: 50%;
+}
+.card-body{
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Delivery Section */
+#deldetails{
+    display: none;
+    padding: 10px;
+    border:solid 3px green;
+    border-radius: 10px;
+}
+/* Submit button */
+#submit-btn{
+    display: none;
+}
+#reset-order{
+    display: none;
+    margin-left: 50px;
+}

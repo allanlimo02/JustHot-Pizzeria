@@ -8,9 +8,112 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNC Pizzeria</title>
+    <title>Just-Hot Pizzeria</title>
 </head>
 <body>
+    <div class="mainer">
+        <div class="row">
+            <div class="col-md-4 clm1">
+                <img class="logo" src="./assets/pizzeria logo.png" alt="" height="300px" width="300px">
+                <h1>Just-Hot  Pizzeria</h1>
+                <p>
+                    The homemade pizza dough is produced in-house daily and is <br> another reason why 
+                    the pizza at Pizza Inn always tastes better. The <br> Twisty Bread, the signature 
+                    Wingz and the delicious Double Meal are <br> additional value-for-money options that
+                    keep our satisfied customers coming back time after time.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3 style="text-align: center; color: white;">Place Order </h3>
+                <!-- Order Form -->
+                <div class="card-body">
+                    <form>
+                        <!-- Username input -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="userName">
+                            </div>
+                        </div>
+                        <!-- pizza size selectio -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Select Size</label>
+                            <div class="col-sm-10">
+                              <select id="pizzaSize" class="form-select">
+                                  <option value=""></option>
+                                  <option value="600">Small Pizza @ Ksh 600</option>
+                                  <option value="850">Medium Pizza @ Ksh. 850</option>
+                                  <option value="1200">Mega Pizza @ Ksh. 1200</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- Crust Selection -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Select Crust</label>
+                            <div class="col-sm-10">
+                              <select id="pizzaSize" class="form-select">
+                                  <option value=""></option>
+                                  <option >Cripsy</option>
+                                  <option >Stuffed</option>
+                                  <option >Glutten-Free</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- Selecting Toppings -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Toppings</label>
+                            <div class="col-sm-10">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Chicken Hawaiian</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Beef Pepperoni</label>
+                                </div>
+                            </div>
+                          </div>
+                          <!-- Delivery option -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Delivery</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="fordelivery" value="option1">
+                                    <label class="form-check-label" for="exampleRadios1"> To Be Deliverd </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="forpickup" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">Pick By Self </label>
+                            </div>
+                          </div>
+                          </div>
+                          <!-- Delivery Details -->
+                          <div class="mb-3 row" id="deldetails" >
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Phone Number</label>
+                            <div class="col-sm-10">
+                              <input type="number" class="form-control" id="userName">
+                            </div>
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Location</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="userName">
+                            </div><br><br>
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Street</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="userName">
+                            </div>
+                        </div>
+
+                        <a href="#" id="checkdetails" class="btn btn-primary">Check Order Details</a><br><br>
+                        <button id="submit-btn" class="btn btn-success" type="submit">Confirm Order</button>
+                        <button type="reset" class="btn btn-danger" id="reset-order">Reset Order</button>
+                    </form>
+                  </div>
+               
+            </div>
+
+
+        </div>
+    </div>
     
 </body>
 </html>
