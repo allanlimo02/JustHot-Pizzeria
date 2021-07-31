@@ -27,9 +27,53 @@
                 <h3 style="text-align: center; color: white;">Order details</h3>
                 <!-- Order Form -->
                 <div class="card-body">
-                    
                     <form>
-                    
+                        <!-- Username input -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="userName">
+                            </div>
+                        </div>
+                        <!-- pizza size selectio -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Select Size</label>
+                            <div class="col-sm-10">
+                              <select id="pizzaSize" class="form-select">
+                                  <option value=""></option>
+                                  <option value="500">Small Pizza @ Ksh 500</option>
+                                  <option value="750">Medium Pizza</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- Crust Selection -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Select Crust</label>
+                            <div class="col-sm-10">
+                              <select id="pizzaSize" class="form-select">
+                                  <option value=""></option>
+                                  <option >Cripsy</option>
+                                  <option >Stuffed</option>
+                                  <option >Glutten-Free</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- Selecting Toppings -->
+                          <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Toppings</label>
+                            <div class="col-sm-10">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Chicken Hawaiian</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Beef Pepperoni</label>
+                                </div>
+                            </div>
+                          </div>
+
+
                     </form>
                   </div>
                

@@ -4,7 +4,7 @@ body{
     background-size: cover;
 }
 .mainer{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,80,0,0.82);;
     border-radius: 10px;
     padding-top: 20px;
     margin-top: 20px;
@@ -15,6 +15,9 @@ body{
 .clm1{
     text-align: center;
     color: white;
+}
+.clm1 h1{
+    color: red;
 }
 .logo{
     border-radius: 50%;
