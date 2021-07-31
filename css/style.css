@@ -52,9 +52,11 @@ body{
 }
 .order-details{
     background-color: white;
-    height: 600px;
+    height: 440px;
     border-radius: 20px;
     margin-right:20px ;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 #confirm-order{
     display: none;
