@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="./js/jquery-3.6.0.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="shortcut icon" href="./assets/pageicon.png" type="image/x-icon">
@@ -34,6 +34,7 @@
                             <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
                               <input type="text" class="form-control" id="userName">
+                              <p id="error1" class="error-mess">This field should be filled *</p>
                             </div>
                         </div>
                         <!-- pizza size selectio -->
@@ -46,6 +47,7 @@
                                   <option value="850">Medium Pizza @ Ksh. 850</option>
                                   <option value="1200">Mega Pizza @ Ksh. 1200</option>
                               </select>
+                              <p id="error2" class="error-mess">Select Pizza size *</p>
                             </div>
                           </div>
                           <!-- Crust Selection -->
@@ -58,6 +60,7 @@
                                   <option >Stuffed</option>
                                   <option >Glutten-Free</option>
                               </select>
+                              <p id="error3" class="error-mess">Select crust *</p>
                             </div>
                           </div>
                           <!-- Selecting Toppings -->
@@ -86,6 +89,7 @@
                                     <input class="form-check-input" type="radio" name="exampleRadios" id="forpickup" value="option2">
                                     <label class="form-check-label" for="exampleRadios2">Pick By Self </label>
                             </div>
+                            <p id="error4" class="error-mess">select a delivery method *</p>
                           </div>
                           </div>
                           <!-- Delivery Details -->
