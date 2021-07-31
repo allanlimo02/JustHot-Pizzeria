@@ -1,13 +1,15 @@
 $(document).ready(function(){
-    var uName= $('#userName').val()
+    var uName= document.getElementById('userName');
+    
 
 
     //form Validation
     $('#checkdetails').click(function(){
-        if(uName==''){
-            $("#error1").show()
-            return false;
-        }
+        // if(uName==''){
+        //     $("#error1").show()
+        //     return false;
+        // }
+        //alert(uName.value)
     })
 
     //Showing Delivery form
@@ -25,7 +27,7 @@ $(document).ready(function(){
     //Showing confirm order button
     $('#checkdetails').click(function(){
         $("#confirm-order").show()
-        $('#forName').append('Dear '+uName.val+' You ordered')    
+        $('#forName').append('Dear '+uName.value+' You ordered')    
     })
     //show submit button
     $("#confirm-order").click(function(){
