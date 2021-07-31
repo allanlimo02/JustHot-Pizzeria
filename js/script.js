@@ -7,10 +7,17 @@ $(document).ready(function(){
         $("#deldetails").hide();
         
     })
-    $("#checkdetails").click(function(){
+    $('#checkdetails').click(function(){
+        $("#confirm-order").show()    
+    })
+    $("#confirm-order").click(function(){
         $('#submit-btn').show()
         $('#reset-order').show()
 
     })
+    $('#submit-btn').click(function(){
+        alert('Order submitted successfully')
+    })
+
 
 })

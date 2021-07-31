@@ -28,7 +28,7 @@
                 <h3 style="text-align: center; color: white;">Place Order </h3>
                 <!-- Order Form -->
                 <div class="card-body">
-                    <form>
+                    <form id="formMain">
                         <!-- Username input -->
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
@@ -105,8 +105,9 @@
                         </div>
 
                         <a href="#" id="checkdetails" class="btn btn-primary">Check Order Details</a><br><br>
-                        <button id="submit-btn" class="btn btn-success" type="submit">Confirm Order</button>
+                        <button id="submit-btn" class="btn btn-success" type="submit">Place Order</button>
                         <button type="reset" class="btn btn-danger" id="reset-order">Reset Order</button>
+                        
                     </form>
                   </div>
                
@@ -114,8 +115,15 @@
             <div class="col-md-4 order-det-main">
                 <h3>Order Details</h3>
                 <div class="order-details">
-
-                </div>
+                    <p id="forName"></p>
+                    <br>
+                    <p id="forPsize"></p>
+                    <br>
+                    <p id="forCrust"></p>
+                    <br>
+                    <p id="forToppings"></p>
+                </div><br><br>
+                <a href="#" id="confirm-order" class="btn btn-warning">Confirm Order</a><br><br>
 
             </div>
 
