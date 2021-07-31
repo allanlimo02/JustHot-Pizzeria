@@ -65,3 +65,9 @@ body{
     margin-left: 100px;
     
 }
+
+/* Error message */
+.error-mess{
+    color: red;
+    display: none;
+}
