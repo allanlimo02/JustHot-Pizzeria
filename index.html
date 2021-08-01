@@ -43,9 +43,9 @@
                             <div class="col-sm-10">
                               <select id="pizzaSize" class="form-select" required>
                                   <option value="" ></option>
-                                  <option >Small Pizza @ Ksh 600</option>
-                                  <option >Medium Pizza @ Ksh. 850</option>
-                                  <option >Mega Pizza @ Ksh. 1200</option>
+                                  <option value="small">Small Pizza @ Ksh 600</option>
+                                  <option value="medium">Medium Pizza @ Ksh. 850</option>
+                                  <option value="large">Mega Pizza @ Ksh. 1200</option>
                               </select>
                               <p id="error2" class="error-mess">Select Pizza size *</p>
                             </div>
@@ -68,17 +68,17 @@
                             <label class="col-sm-2 col-form-label">Toppings</label>
                             <div class="col-sm-10">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="radio" id="topping1">
+                                  <input class="form-check-input" type="checkbox" value="" id="topping1"> 
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Chicken Hawaiian</label>
                                 </div>
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="radio" id="topping2">
+                                  <input class="form-check-input" type="checkbox" value="" id="topping2">
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Beef Pepperoni</label>
                                 </div>
                             </div>
                           </div>
                           <!-- Delivery option -->
-                          <div class="mb-3 row">
+                          <div class="mb-3 row" style="display: none;">
                             <label class="col-sm-2 col-form-label">Delivery</label>
                             <div class="col-sm-10">
                                 <div class="form-check">
