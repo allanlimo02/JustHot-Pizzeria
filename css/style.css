@@ -5,7 +5,7 @@ body{
     overflow-x: hidden;
 }
 .mainer{
-    background-color: rgba(0,80,0,0.82);
+    background-color: rgba(0,80,0,0.7);
     border-radius: 10px;
     padding-top: 20px;
     margin-top: 20px;
@@ -79,5 +79,5 @@ footer{
     text-align: center;
     border-radius: 20px;
     margin: 10px 50px 10px 50px;
-    background-color: rgba(80,0,0,0.82);
+    background-color: rgba(80,0,0,0.7);
 }
