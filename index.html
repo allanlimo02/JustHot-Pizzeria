@@ -33,7 +33,7 @@
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="userName">
+                              <input type="text" class="form-control" id="userName" required>
                               <p id="error1" class="error-mess">This field should be filled *</p>
                             </div>
                         </div>
@@ -41,11 +41,11 @@
                           <div class="mb-3 row">
                             <label class="col-sm-2 col-form-label">Select Size</label>
                             <div class="col-sm-10">
-                              <select id="pizzaSize" class="form-select">
+                              <select id="pizzaSize" class="form-select" required>
                                   <option value=""></option>
-                                  <option value="600">Small Pizza @ Ksh 600</option>
-                                  <option value="850">Medium Pizza @ Ksh. 850</option>
-                                  <option value="1200">Mega Pizza @ Ksh. 1200</option>
+                                  <option >Small Pizza @ Ksh 600</option>
+                                  <option >Medium Pizza @ Ksh. 850</option>
+                                  <option >Mega Pizza @ Ksh. 1200</option>
                               </select>
                               <p id="error2" class="error-mess">Select Pizza size *</p>
                             </div>
@@ -54,7 +54,7 @@
                           <div class="mb-3 row">
                             <label class="col-sm-2 col-form-label">Select Crust</label>
                             <div class="col-sm-10">
-                              <select id="pizzaSize" class="form-select">
+                              <select id="crust" class="form-select" required>
                                   <option value=""></option>
                                   <option >Cripsy</option>
                                   <option >Stuffed</option>
@@ -68,11 +68,11 @@
                             <label class="col-sm-2 col-form-label">Toppings</label>
                             <div class="col-sm-10">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <input class="form-check-input" type="radio" id="topping1">
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Chicken Hawaiian</label>
                                 </div>
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <input class="form-check-input" type="radio" id="topping2">
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Beef Pepperoni</label>
                                 </div>
                             </div>
@@ -128,6 +128,8 @@
                     <p id="forToppings"></p>
                     <br>
                     <p id="forDelivery"></p>
+                    <br>
+                    <p id="forPrice"></p>
                 </div>
                 <br><br>
                 <a href="#" id="confirm-order" class="btn btn-warning">Confirm Order</a><br><br>
@@ -137,6 +139,29 @@
 
         </div>
     </div>
+    <footer>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Just-Hot Pizzeria</h3>
+                <p>We serve the best pizza in Nairobi</p>
+                <h4>Visit us today</h4>
+                <p>Ngong Lane Plaza</p>
+                <p>3rd floor</p>
+                <p>0726 832 007</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Recent Blogs</h2>
+                <p><a href="#">Why pizza market is growing fast in kenya</a></p>
+                <p><a href="#">How to keep up with pizza market</a></p>
+                <p><a href="#">Market demand in Nairobi</a></p>
+
+            </div>
+            <div class="col-md-4">
+                
+
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

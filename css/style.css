@@ -2,9 +2,10 @@ body{
     background-image: url(../assets/landing.jpg);
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 .mainer{
-    background-color: rgba(0,80,0,0.82);;
+    background-color: rgba(0,80,0,0.82);
     border-radius: 10px;
     padding-top: 20px;
     margin-top: 20px;
@@ -70,4 +71,13 @@ body{
 .error-mess{
     color: red;
     display: none;
+}
+footer{
+    color: yellow;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px 50px 10px 50px;
+    background-color: rgba(80,0,0,0.82);
 }
