@@ -1,63 +1,38 @@
+function pOrder(name,Size,Selectedcrust,selecttopping1,selecttopping2,slctdelivery){
+    this.uName=name;
+    this.pSize=Size;
+    this.crust=Selectedcrust;
+    this.topping1=selecttopping1;
+    this.topping2=selecttopping2;
+    this.forDelivery=slctdelivery;
+}
+
 $(document).ready(function(){
-  //  Creating objects for pizza
-    function pOrder(Name,Size,Selectedcrust,selecttopping1,selecttopping2,slctdelivery,slctpickup){
-        this.uName=Name;
-        this.pSize=Size;
-        this.crust=Selectedcrust;
-        this.topping1=selecttopping1;
-        this.topping2=selecttopping2;
-        this.forDelivery=slctdelivery;
-        this.forPickup=slctpickup;
-    }
-    
-//     //Getting user input
-//     var inputUname=$('#userName').val();
-//     var inputPizzaSize=$('#pizzaSize').val();
-//     var inputcrust=$('#crust').val();
-
-//    // var inputUname=$('#userName').val();
-    
-
-   
-//     //Equating input values to pOrder constructor
-//     var
-
-    
-    
-    //declaring variables   
-    var uName= document.getElementById('userName');
+  //  Creating objects for pizza 
+    var inputName= document.getElementById('userName');
     var pSize= document.getElementById('pizzaSize');
     var crust= document.getElementById('crust');
     var chicHawaii= document.getElementById('topping1').checked;
     var peperoni= document.getElementById('topping2').checked;
     var forDelivery= document.getElementById('fordelivery').checked;
-    var forPickup= document.getElementById('forpickup').checked;
-    var crust_price,price,total
     
+    //Constructor to create a new order
+    var newOrder= new pOrder(inputName,pSize,crust,chicHawaii,peperoni,forDelivery)
 
     //Showing Delivery form
     $("#fordelivery").click(function(){
         $("#deldetails").show();
-        //$('.order-details').css('height','770px')
-
     })
-
     $("#forpickup").click(function(){
         $("#deldetails").hide();
-       // $('.order-details').css('height','440px')
+      
         
     })
     //Showing confirm order button
     $('#checkdetails').click(function(){
         
         
-
-        $("#confirm-order").show()
-        $('#forName').html('Dear '+uName.value+' You ordered')
-        $('#forPsize').html(pSize.value+' pizza')
-        $('#forCrust').html(crust.value+' As crust for your order costing '+ crust_price)
-        $('#forPrice').html("Total due  is: Ksh."+price+500)
-        $('#forDelivery').html(forDelivery.value+' As delivery option')
+        
         
         //price determining
         
@@ -74,6 +49,16 @@ $(document).ready(function(){
                 
             
            } 
+        if(chicHawaii.value===true && peperoni.value===true){
+            $('#forToppings').html(' Chicken hawaii as toppings ');
+        }else
+        if(topping1.value==true){
+            $('#forToppings').html(' Chicken hawaii as toppings ');
+        }else
+        if(topping2.value==true){
+            $('#forToppings').html(' Beef periperi as toppings ');
+        }else
+        $('#forToppings').html(' With no toppings ');
         // Crust price determination
         switch(crust.value){
             case "Crispy":
@@ -91,24 +76,29 @@ $(document).ready(function(){
         switch(forDelivery.value){
 
         }
+        $('#deliveryQ').show()
+        $("#confirm-order").show()
+        $('#forName').html('Dear '+newOrder.uName.value+' You ordered')
+        $('#forPsize').html(newOrder.pSize.value+' pizza')
+        $('#forCrust').html(crust.value +' As crust for your order costing ')
         
-        
-    })
-    
-    //cost calculator
-    
+        $('#forPrice').html("Total due  is: Ksh."+price)
+       // $('#forDelivery').html(forDelivery.value+' As delivery option')        
+    })    
     //show submit button
     $("#confirm-order").click(function(){
-        //check if fields are empty
         
-        $('#error1').hide();
+        
+        $('#error1').show();
         $('#submit-btn').show();
         $('#reset-order').show();
 
     })
     $('#submit-btn').click(function(){
-        alert("Dear "+uName.value+' Your order has \n been submitted successfully')
+        alert("Dear "+newOrder.uName+', Your order has \n been submitted successfully')
     })
-
+    $('#deliveryQ').click(function(){
+        $('#deldetails').toggle();
+    })
 
 })
