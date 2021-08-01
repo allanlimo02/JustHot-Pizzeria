@@ -15,6 +15,7 @@ $(document).ready(function(){
     var chicHawaii= document.getElementById('topping1').checked;
     var peperoni= document.getElementById('topping2').checked;
     var forDelivery= document.getElementById('fordelivery').checked;
+    var shipping=50;
     
     //Constructor to create a new order
     var newOrder= new pOrder(inputName,pSize,crust,chicHawaii,peperoni,forDelivery)
@@ -49,16 +50,16 @@ $(document).ready(function(){
                 
             
            } 
-        if(chicHawaii.value===true && peperoni.value===true){
-            $('#forToppings').html(' Chicken hawaii as toppings ');
-        }else
-        if(topping1.value==true){
-            $('#forToppings').html(' Chicken hawaii as toppings ');
-        }else
-        if(topping2.value==true){
-            $('#forToppings').html(' Beef periperi as toppings ');
-        }else
-        $('#forToppings').html(' With no toppings ');
+        // if(chicHawaii.value==="chicken" && peperoni.value==="beef"){
+        //     $('#forToppings').html(' Chicken hawaii as toppings ');
+        // }else
+        // if(chicHawaii.value==='chicken'){
+        //     $('#forToppings').html(' Chicken hawaii as toppings ');
+        // }else
+        // if(peperoni.value==='beef'){
+        //     $('#forToppings').html(' Beef periperi as toppings ');
+        // }else
+        // $('#forToppings').html(' With no toppings ');
         // Crust price determination
         switch(crust.value){
             case "Crispy":
@@ -81,24 +82,22 @@ $(document).ready(function(){
         $('#forName').html('Dear '+newOrder.uName.value+' You ordered')
         $('#forPsize').html(newOrder.pSize.value+' pizza')
         $('#forCrust').html(crust.value +' As crust for your order costing ')
-        
         $('#forPrice').html("Total due  is: Ksh."+price)
        // $('#forDelivery').html(forDelivery.value+' As delivery option')        
     })    
     //show submit button
     $("#confirm-order").click(function(){
-        
-        
-        $('#error1').show();
         $('#submit-btn').show();
         $('#reset-order').show();
+        $('#formMain').hide
 
     })
     $('#submit-btn').click(function(){
-        alert("Dear "+newOrder.uName+', Your order has \n been submitted successfully')
+        alert("Dear "+newOrder.uName.value+', Your order has \n been submitted successfully')
     })
     $('#deliveryQ').click(function(){
         $('#deldetails').toggle();
+        $('#forDelivery').html("Shipping fees Ksh: "+shipping)
     })
 
 })
