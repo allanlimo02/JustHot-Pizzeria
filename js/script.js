@@ -1,10 +1,11 @@
-function pOrder(name,Size,Selectedcrust,selecttopping1,selecttopping2,slctdelivery){
+function pOrder(name,Size,Selectedcrust,selecttopping1,selecttopping2,slctdelivery,noofpizza){
     this.uName=name;
     this.pSize=Size;
     this.crust=Selectedcrust;
     this.topping1=selecttopping1;
     this.topping2=selecttopping2;
     this.forDelivery=slctdelivery;
+    this.numofpizza=noofpizza;
 }
 
 $(document).ready(function(){
@@ -15,6 +16,8 @@ $(document).ready(function(){
     var chicHawaii= document.getElementById('topping1').checked;
     var peperoni= document.getElementById('topping2').checked;
     var forDelivery= document.getElementById('fordelivery').checked;
+    var inputNumber=document.getElementById('no-of-pizza')
+    var delreq=document.getElementById('delreq').checked
     var shipping=50;
     
     //Constructor to create a new order
@@ -50,17 +53,17 @@ $(document).ready(function(){
                 
             
            } 
-        // if(chicHawaii.value==="chicken" && peperoni.value==="beef"){
-        //     $('#forToppings').html(' Chicken hawaii as toppings ');
-        // }else
-        // if(chicHawaii.value==='chicken'){
-        //     $('#forToppings').html(' Chicken hawaii as toppings ');
-        // }else
-        // if(peperoni.value==='beef'){
-        //     $('#forToppings').html(' Beef periperi as toppings ');
-        // }else
-        // $('#forToppings').html(' With no toppings ');
-        // Crust price determination
+        if(chicHawaii.value==="chicken" && peperoni.value==="beef"){
+            $('#forToppings').html(' Chicken hawaii as toppings ');
+        }else
+        if(chicHawaii.value==='chicken'){
+            $('#forToppings').html(' Chicken hawaii as toppings ');
+        }else
+        if(peperoni.value==='beef'){
+            $('#forToppings').html(' Beef periperi as toppings ');
+        }else
+        $('#forToppings').html(' With no toppings ');
+        //Crust price determination
         switch(crust.value){
             case "Crispy":
               crust_price = 200;
@@ -77,12 +80,18 @@ $(document).ready(function(){
         switch(forDelivery.value){
 
         }
+        var delPrice=0
+        if(delreq==true){
+          delPrice=150;
+        }else
+        delPrice=0
+
         $('#deliveryQ').show()
         $("#confirm-order").show()
         $('#forName').html('Dear '+newOrder.uName.value+' You ordered')
-        $('#forPsize').html(newOrder.pSize.value+' pizza')
+        $('#forPsize').html(inputNumber.value+' '+newOrder.pSize.value+' pizza')
         $('#forCrust').html(crust.value +' As crust for your order costing ')
-        $('#forPrice').html("Total due  is: Ksh."+price)
+        $('#forPrice').html("Total due  is: Ksh."+(price*inputNumber.value))
        // $('#forDelivery').html(forDelivery.value+' As delivery option')        
     })    
     //show submit button
@@ -93,7 +102,20 @@ $(document).ready(function(){
 
     })
     $('#submit-btn').click(function(){
-        alert("Dear "+newOrder.uName.value+', Your order has \n been submitted successfully')
+      if(newOrder.uName.value=='') {
+        $('#error1').toggle()
+        return false
+      } else
+      if(newOrder.pSize.value==''){
+        $('#error2').show()
+        return false;
+      }else
+      if(newOrder.crust.value==''){
+        $('#error3').show()
+        return false;
+      }else      
+      alert("Dear "+newOrder.uName.value+', Your order has of '+newOrder.pSize.value+ ' pizza is being proccessed \n')
+
     })
     $('#deliveryQ').click(function(){
         $('#deldetails').toggle();
