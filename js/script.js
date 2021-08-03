@@ -53,6 +53,21 @@ $(document).ready(function(){
                 
             
            } 
+          switch(crust.value){
+            case "cripsy":
+              cPrice=200;
+              break;
+            case "stuffed":
+              cPrice=250;
+              break;
+            case "glutten-free":
+                cPrice=300;
+                break;
+            default:
+                cPrice=0
+          }
+
+
         if(chicHawaii.value==="chicken" && peperoni.value==="beef"){
             $('#forToppings').html(' Chicken hawaii as toppings ');
         }else
@@ -64,19 +79,19 @@ $(document).ready(function(){
         }else
         $('#forToppings').html(' With no toppings ');
         //Crust price determination
-        switch(crust.value){
-            case "Crispy":
-              crust_price = 200;
-            break;
-            case "Stuffed":
-              crust_price = 250;
-            break;
-            case "Gluten-free":
-              crust_price = 180;
-            break;
-            default:
-              crust_price=0;
-        }
+        // switch(crust.value){
+        //     case "Crispy":
+        //       crust_price = 200;
+        //     break;
+        //     case "Stuffed":
+        //       crust_price = 250;
+        //     break;
+        //     case "Gluten-free":
+        //       crust_price = 180;
+        //     break;
+        //     default:
+        //       crust_price=0;
+        // }
         switch(forDelivery.value){
 
         }
@@ -90,8 +105,9 @@ $(document).ready(function(){
         $("#confirm-order").show()
         $('#forName').html('Dear '+newOrder.uName.value+' You ordered')
         $('#forPsize').html(inputNumber.value+' '+newOrder.pSize.value+' pizza')
-        $('#forCrust').html(crust.value +' As crust for your order costing ')
-        $('#forPrice').html("Total due  is: Ksh."+(price*inputNumber.value))
+        $('#forCrust').html(crust.value +' As crust for your order costing: '+cPrice)
+        $('#forPrice').html("Total due  is: Ksh."+((price*inputNumber.value)+cPrice))
+
        // $('#forDelivery').html(forDelivery.value+' As delivery option')        
     })    
     //show submit button
