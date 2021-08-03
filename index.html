@@ -56,9 +56,9 @@
                             <div class="col-sm-10">
                               <select id="crust" class="form-select" required>
                                   <option value=""></option>
-                                  <option >Cripsy</option>
-                                  <option >Stuffed</option>
-                                  <option >Glutten-Free</option>
+                                  <option value="cripsy" >Cripsy</option>
+                                  <option value="stuffed" >Stuffed</option>
+                                  <option value="glutten-free">Glutten-Free</option>
                               </select>
                               <p id="error3" class="error-mess">Select crust *</p>
                             </div>
@@ -140,14 +140,16 @@
                     <p id="forDelivery"></p>
                     <br><br>
                     <p id="forPrice"></p>
+                    <div class="btn btn-primary" id="deliveryQ" style="display: none;">
+                      <input class="form-check-input" type="checkbox" value="" id="deliveryQ">
+                      <label class="form-check-label" id="delreq" for="flexSwitchCheckDefault">Request Delivery</label>
+                    </div>
+                    <br><br>
                 </div>
                 <br><br>
                 <a href="#" id="confirm-order" class="btn btn-warning">Confirm Order</a>
                 
-                <div class="btn btn-warning" id="deliveryQ" style="display: none;">
-                  <input class="form-check-input" type="checkbox" value="" id="deliveryQ">
-                  <label class="form-check-label" id="delreq" for="flexSwitchCheckDefault">Request Delivery</label>
-                </div>  
+               
                   
 
             </div>
